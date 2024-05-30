@@ -4,7 +4,7 @@ const subCategorySchema=new Schema({
         type: String,
         unique:true,
         required:true,
-        minlength:[2,'too short category name'],
+        minlength:[2,'too short subcategory name'],
         trim:true
     },
     slug:{
@@ -18,4 +18,4 @@ const subCategorySchema=new Schema({
     }
 
 })
-export const subCategoryModel= model('subcategory',subCategoryModel)
+export const subCategoryModel= model('subcategory',subCategorySchema)
