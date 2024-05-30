@@ -20,7 +20,8 @@ const productSchema=new Schema({
         type:Number,
         min:0,
         default:0,
-    }, ratingAvg: {
+    },
+     ratingAvg: {
         type: Number,
         min: [1, "rating average must be greater then 1"],
         max: [5, "rating average must be less then 5"],
@@ -43,18 +44,10 @@ const productSchema=new Schema({
       }
 ,description:{
     type:String,
-    maxlength:[100, 
-        "description should be less or equal to 100 caracters"],
-minlength:[100, " too short description of product"]
-    ,required:true,
+    minLength: [5, "description is too short"],
+    maxLength: [300, "description is too long"],
+    required:true,
 trim:true
-},
-
-stock:
-{type:Number,
-    min:0,
-    default:0
-
 }
 ,imgCover:{type:String},
 images:{
