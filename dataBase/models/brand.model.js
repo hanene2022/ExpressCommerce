@@ -12,9 +12,12 @@ const brandSchema=new Schema({
     },
     logo:{
         type:String,
-        // required:true
+       
     },
    
 
-})
+}
+, {
+    timestamps: true,
+  })
 export const brandModel= model('brand',brandSchema)

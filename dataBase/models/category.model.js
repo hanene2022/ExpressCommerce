@@ -10,11 +10,13 @@ const categorySchema=new Schema({
     slug:{
         type:String,
         lowercase:true,
+        required:[true,"slug is required"],
     },
     image:{
         type:String,
         required:true
     },
 
-})
+},
+{timestamps:true})
 export const categoryModel= model('category',categorySchema)

@@ -17,5 +17,5 @@ const subCategorySchema=new Schema({
         required:true,
     }
 
-})
+},{timestamps:true})
 export const subCategoryModel= model('subcategory',subCategorySchema)

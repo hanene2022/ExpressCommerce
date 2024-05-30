@@ -75,8 +75,8 @@ brand:{
 
 
 },
-
-
-
-})
+}, {
+    timestamps: true,
+  }
+)
 export const productModel= model('product',productSchema)
