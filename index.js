@@ -1,10 +1,12 @@
 import express  from 'express'
 import  dotenv from 'dotenv'
 import { dbConnection } from './dataBase/dbConnection.js'
+import categoryRouter from './src/modules/categories/categories.routes.js';
 dotenv.config();
 const app = express()
 const port = 4000
 app.use(express.json())
+app.use("/category",categoryRouter)
 app.get('*', (req, res)=> 
     res.json({message:`can't find this route: ${req.originalUrl}`}))
 dbConnection()
